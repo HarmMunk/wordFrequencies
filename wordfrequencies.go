@@ -14,7 +14,7 @@ import (
 
 const (
 	//ngramFileName = "dutch123grams.tsv"
-	ngramFileName = "english1234grams.tsv"
+	ngramFileName = "english1234grams.txt"
 
 	//maxTrigramsPercentage = 0.1
 	//maxBigramsPercentage  = 1.0
@@ -94,7 +94,7 @@ func main() {
 	for l1 := range allLetters {
 		for l2 := range allLetters {
 			for l3 := range allLetters {
-				triGram := string(l1) + string(l2) + string(l3)
+				triGram := string(rune(l1)) + string(rune(l2)) + string(rune(l3))
 				if _, ok := nGramFreqIn[triGram]; ok {
 					if match, _ := regexp.MatchString(onlyConsonants, triGram); match {
 						fmt.Println("Only consonants: ", triGram)
