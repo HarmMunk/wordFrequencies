@@ -1,0 +1,7 @@
+[system]
+ngramFileName = "dutch123grams.tsv"
+#ngramFileName = "english1234grams.txt"
+
+[ngrams]
+ngram_percentages = [1.0, 0.1]
+excluded_ngrams = ["www", "aaa"]
